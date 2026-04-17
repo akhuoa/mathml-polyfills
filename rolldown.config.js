@@ -8,7 +8,7 @@ export default defineConfig([
       file: 'dist/all-polyfills-bundle.js',
       format: 'esm',
       minify: true,
-      sourcemap: true,
+      sourcemap: false,
     },
   },
   {
