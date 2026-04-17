@@ -1,0 +1,35 @@
+{
+  "name": "mathml-polyfills",
+  "version": "1.0.0",
+  "description": "[This repository](https://github.com/w3c/mathml-polyfills/) contains polyfills for features from the [MathML specification](https://w3c.github.io/mathml/), relying only on [MathML Core](https://w3c.github.io/mathml-core/) and other web technologies natively implemented in browsers. See discussion on [wiki](https://github.com/w3c/mathml-polyfills/wiki/MathML-Polyfill-Task-Force-Guidelines)",
+  "homepage": "https://github.com/akhuoa/mathml-polyfills#readme",
+  "bugs": {
+    "url": "https://github.com/akhuoa/mathml-polyfills/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhuoa/mathml-polyfills.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "all-polyfills.js",
+  "module": "./dist/all-polyfills-bundle.js",
+  "types": "./dist/all-polyfills-bundle.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/all-polyfills-bundle.d.ts",
+      "import": "./dist/all-polyfills-bundle.js"
+    }
+  },
+  "scripts": {
+    "build": "rolldown -c rolldown.config.js",
+    "dev": "rolldown -c rolldown.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@rolldown/node": "^0.0.5",
+    "rolldown-plugin-dts": "^0.23.2",
+    "typescript": "^6.0.3"
+  }
+}
